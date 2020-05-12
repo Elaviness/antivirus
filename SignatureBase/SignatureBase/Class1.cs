@@ -5,4 +5,5 @@ namespace SignatureBase
     public class Class1
     {
     }
+
 }
