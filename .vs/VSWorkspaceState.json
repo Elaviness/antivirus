@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SignatureBase",
+    "\\SignatureBase\\SignatureBase"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\SignatureBase\\SignatureBase.sln",
   "PreviewInSolutionExplorer": false
 }

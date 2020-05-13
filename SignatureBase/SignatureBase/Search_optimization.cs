@@ -1,12 +1,10 @@
 using System;
 
+
 namespace SignatureBase
 {
     public class Search_optimization
     {
-
-        
-
         Search_optimization()
         {
 
@@ -19,7 +17,6 @@ namespace SignatureBase
 
         public void Optimization_base_of_signature()
         {
-            
         }
 
     }
