@@ -8,7 +8,7 @@ namespace SignatureBase
 {
 	public class Work_with_data
 	{
-	
+		public Mutex Mutex_WWD = new Mutex(false, "Mutex_WWD");
 		public string SIGNATURE_DB_FILE_NAME = "SignatureDB.txt", PATH_TO_DB_FILE;
 
 
