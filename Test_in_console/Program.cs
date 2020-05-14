@@ -10,9 +10,16 @@ namespace SignatureBase
     {
         static void Main(string[] args)
         {
-            Work_with_data WWD = new Work_with_data();
+            //Search_optimization SO = new Search_optimization();
 
-            WWD.Write_to_file("wef", 5, 5, "regewrgerge", 5, 5);
+            //SO.Optimization_base_of_signature();
+
+            string fst = "zxc";
+            string snd = "abc";
+
+            Console.WriteLine(fst.CompareTo(snd));
+          
+            Console.ReadKey();
         }
     }
 }

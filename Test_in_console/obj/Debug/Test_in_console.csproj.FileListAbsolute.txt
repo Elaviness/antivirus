@@ -7,3 +7,12 @@ C:\Users\Nikolay\source\repos\Antivirus\Test_in_console\obj\Debug\Test_in_consol
 C:\Users\Nikolay\source\repos\Antivirus\Test_in_console\obj\Debug\Test_in_console.csproj.CopyComplete
 C:\Users\Nikolay\source\repos\Antivirus\Test_in_console\obj\Debug\Test_in_console.exe
 C:\Users\Nikolay\source\repos\Antivirus\Test_in_console\obj\Debug\Test_in_console.pdb
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\bin\Debug\Test_in_console.exe.config
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\bin\Debug\Test_in_console.exe
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\bin\Debug\Test_in_console.pdb
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\bin\Debug\SignatureBase.dll
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\bin\Debug\SignatureBase.pdb
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\obj\Debug\Test_in_console.csprojAssemblyReference.cache
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\obj\Debug\Test_in_console.csproj.CopyComplete
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\obj\Debug\Test_in_console.exe
+C:\Users\Nikolay\Desktop\antivirus\antivirus\Test_in_console\obj\Debug\Test_in_console.pdb
