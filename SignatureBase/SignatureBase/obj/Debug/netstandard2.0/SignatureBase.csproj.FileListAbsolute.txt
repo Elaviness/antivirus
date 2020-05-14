@@ -14,3 +14,12 @@ C:\Users\Nikolay\source\repos\Antivirus\SignatureBase\SignatureBase\obj\Debug\ne
 C:\Users\Nikolay\source\repos\Antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.AssemblyInfo.cs
 C:\Users\Nikolay\source\repos\Antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.dll
 C:\Users\Nikolay\source\repos\Antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.pdb
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.csproj.CoreCompileInputs.cache
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.AssemblyInfoInputs.cache
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.AssemblyInfo.cs
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.dll
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.pdb
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.csprojAssemblyReference.cache
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.deps.json
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.dll
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.pdb

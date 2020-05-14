@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\SignatureBase",
-    "\\SignatureBase\\SignatureBase"
+    "\\SignatureBase\\SignatureBase",
+    "\\Test_in_console"
   ],
-  "SelectedNode": "\\SignatureBase\\SignatureBase.sln",
+  "SelectedNode": "\\SignatureBase\\SignatureBase\\SignatureIO.cs",
   "PreviewInSolutionExplorer": false
 }

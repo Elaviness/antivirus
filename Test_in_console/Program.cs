@@ -10,15 +10,16 @@ namespace SignatureBase
     {
         static void Main(string[] args)
         {
-            //Search_optimization SO = new Search_optimization();
-
-            //SO.Optimization_base_of_signature();
-
+            Signature my_sign = new Signature();
+            my_sign.LineSplit("virus 5 hello jshgdfjsygdvhd 1 10");
             string fst = "zxc";
             string snd = "abc";
 
             Console.WriteLine(fst.CompareTo(snd));
-          
+            foreach (var itm in my_sign.Signature_list)
+            {
+                Console.WriteLine(itm.name);
+            }
             Console.ReadKey();
         }
     }
