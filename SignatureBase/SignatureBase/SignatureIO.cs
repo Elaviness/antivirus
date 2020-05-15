@@ -12,7 +12,7 @@ namespace SignatureBase
         public int offset_begin; //минимальное смещение первого символа сигнатуры относительно начала
         public int offset_end; //максимальное смещение от начала файла
         public List<Signature> Signature_list = new List<Signature>();
-        Work_with_data WWD = new Work_with_data();
+        readonly Work_with_data WWD = new Work_with_data();
         public Signature() { } // конструктор
 
         // конструктор класса по атрибутам
