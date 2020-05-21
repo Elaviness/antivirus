@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SignatureBase
 {
-    public class Signature : IComparable<Signature>, IComparer<Signature>
+    public class Signature : IComparable<Signature>/*, IComparer<Signature>*/
     {
         public string name;
         public int signature_length; // k символов сигнатуры (n<=k)
@@ -56,11 +56,28 @@ namespace SignatureBase
             }
         }
 
-
         //Использует алгоритм двоичного поиска для нахождения определенного элемента в отсортированном списке
         public int Find_prefix(string prefix)
         {
-            return Signature_list.BinarySearch(new Signature { signature_prefix = prefix });
+            int size = Signature_list.Count,
+                low = 0,
+                high = size - 1;
+            while (low <= high)
+            {
+                int mid = (low + high) / 2;
+                if ((Signature_list[mid].signature_prefix.ToString()).Contains(prefix))
+                    return mid;
+                else
+                    if (Signature_list[mid].signature_prefix.CompareTo(prefix) < 0)
+                {
+                    low = mid + 1;
+                }
+                    else
+                {
+                    high = mid - 1;
+                }
+            }
+            return -1;
         }
 
         //метод для сортировки списка бд (.Sort())
@@ -69,10 +86,10 @@ namespace SignatureBase
             return signature_prefix.CompareTo(other.signature_prefix);           //   Если количество секций превышает 2 log n, где n — диапазон входного массива, используется алгоритм хеапсорт.
         }                                                                        //   В противном случае используется алгоритм QuickSort.
 
-        //доп. метод по сравнению элементов для бинарного поиска
-        public int Compare(Signature x, Signature y)
-        {
-            return x.signature_prefix.CompareTo(y.signature_prefix);
-        }
+        ////доп. метод по сравнению элементов для бинарного поиска
+        //public int Compare(Signature x, Signature y)
+        //{
+        //    return x.signature_prefix.CompareTo(y.signature_prefix);
+        //}
     }
 }

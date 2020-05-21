@@ -8,9 +8,15 @@ namespace Scan
 {
     class ScanObject
     {
-        string FILE_NAME; //для файлов имя файла
-        string FILE_PATH; //путь до объекта
-        List<ScanRegion> Region_list = new List<ScanRegion> { }; //Список регионов ScanRegion для сканирования
+        string FILE_NAME, //для файлов имя файла
+               FILE_PATH; //путь до объекта
+
+        bool start_scan_object = false, //флаги, сигнализирующие о начале и конце файла
+             end_scan_object = false,  // ..
+             start_object_region = false, //флаги, сигнализирующие о начале и конце блока 
+             end_object_region = false; // ..
+
+        List<ScanRegion> region_list = new List<ScanRegion> { }; //Список регионов ScanRegion для сканирования
         //Список подобъектов
 
         ScanObject()
@@ -25,6 +31,9 @@ namespace Scan
             //Метод должен сигнализировать о начале и конце объекта, о начале и 
             //конце каждого региона, о начале и конце каждого дочернего подобъекта
 
+
+            // Directory.GetFiles
+            // SearchFile
         }
     }
 }

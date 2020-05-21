@@ -23,3 +23,11 @@ C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\obj\Debug\nets
 C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.deps.json
 C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.dll
 C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.pdb
+C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.deps.json
+C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.dll
+C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.pdb
+C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.csprojAssemblyReference.cache
+C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.AssemblyInfoInputs.cache
+C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.AssemblyInfo.cs
+C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.dll
+C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.pdb

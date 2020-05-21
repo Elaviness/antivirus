@@ -30,9 +30,7 @@ namespace SignatureBase
             }
 
             Console.WriteLine();
-            Console.WriteLine("Индекс записи с префиксом \"word\": {0}", my_sign.Find_prefix("world"));
-          
-
+            Console.WriteLine("Индекс записи с префиксом \"rl\": {0}", my_sign.Find_prefix("rl"));
             Console.ReadKey();
         }
     }
