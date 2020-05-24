@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DirectoryMonitor.cs" />
     <Compile Include="IObjectContent.cs" />
     <Compile Include="ScanObject.cs" />
     <Compile Include="ScanRegion.cs" />
