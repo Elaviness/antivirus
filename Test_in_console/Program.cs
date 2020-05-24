@@ -11,7 +11,7 @@ namespace SignatureBase
 
             my_sign.LineSplit("Petya 6 hello jshgdfjsygdvhd 1 10");
 
-            my_sign.LineSplit("Alesha 6 world jshgdfjsygdvhd 1 10");
+            my_sign.LineSplit("Alesha 6 wo jshgdfjsygdvhd 1 10");
 
             my_sign.LineSplit("Zinaida 6 aloha jshgdfjsygdvhd 1 10");
 
@@ -30,7 +30,7 @@ namespace SignatureBase
             }
 
             Console.WriteLine();
-            Console.WriteLine("Индекс записи с префиксом \"rl\": {0}", my_sign.Find_prefix("rl"));
+            Console.WriteLine("Индекс записи с префиксом \"rl\": {0}", my_sign.Find_prefix(""));
             Console.ReadKey();
         }
     }

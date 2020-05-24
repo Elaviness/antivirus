@@ -57,7 +57,7 @@ namespace SignatureBase
         }
 
         //Использует алгоритм двоичного поиска для нахождения определенного элемента в отсортированном списке
-        public int Find_prefix(string prefix)
+        public int Find_prefix(string region) 
         {
             int size = Signature_list.Count,
                 low = 0,
@@ -65,10 +65,10 @@ namespace SignatureBase
             while (low <= high)
             {
                 int mid = (low + high) / 2;
-                if ((Signature_list[mid].signature_prefix.ToString()).Contains(prefix))
+                if (region.Contains(Signature_list[mid].signature_prefix.ToString()))
                     return mid;
                 else
-                    if (Signature_list[mid].signature_prefix.CompareTo(prefix) < 0)
+                    if (region.CompareTo(Signature_list[mid].signature_prefix) < 0)
                 {
                     low = mid + 1;
                 }
