@@ -8,8 +8,8 @@ namespace Scan
 {
     class ScanObject
     {
-        string FILE_NAME, //для файлов имя файла
-               FILE_PATH; //путь до объекта
+        string file_name, //для файлов имя файла
+               file_path; //путь до объекта
 
         bool start_scan_object = false, //флаги, сигнализирующие о начале и конце файла
              end_scan_object = false,  // ..
@@ -19,10 +19,8 @@ namespace Scan
         List<ScanRegion> region_list = new List<ScanRegion> { }; //Список регионов ScanRegion для сканирования
         //Список подобъектов
 
-        ScanObject()
-        {
+        ScanObject(){}
 
-        }
 
         void Block_read()
         {

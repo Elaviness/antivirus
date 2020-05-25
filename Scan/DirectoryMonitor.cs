@@ -14,7 +14,7 @@ namespace Scan
         //Непосредственное обращение к API операционной системе не производится. Класс должен поддерживать добавление
         //и удаление директорий, а также остановку и запуск отслеживания
 
-        string PATH_TO_DIRECTORY,
+        string path_to_directory,
                directory_param;
 
         char param_separator = ';';
@@ -26,7 +26,7 @@ namespace Scan
         public List<DirectoryMonitor> directory_list = new List<DirectoryMonitor> { };
 
 
-        public abstract void Change_directory_list(string PATH_TO_DIRECTORY, string action, string param_change);
+        public abstract void Change_directory_list(string path_to_directory, string action, string param_change);
 
     }
 }

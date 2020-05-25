@@ -8,24 +8,32 @@ namespace SignatureBase
 {
 	public class Work_with_data
 	{
-		public Mutex Mutex_WWD = new Mutex(false, "Mutex_WWD");
-		public string SIGNATURE_DB_FILE_NAME = "SignatureDB.txt", PATH_TO_DB_FILE;
+		public Mutex mutex_wwd = new Mutex(false, "mutex_wwd");
+		public string signature_db_file_name = "SignatureDB.txt", path_to_db_file;
 
 		public Work_with_data()
 		{
-			PATH_TO_DB_FILE = Path.Combine(Directory.GetCurrentDirectory(), SIGNATURE_DB_FILE_NAME);
+			path_to_db_file = Path.Combine(Directory.GetCurrentDirectory(), signature_db_file_name);
 		}
 
 		public void Write_to_end_file(string virus_name, int signature_length, int signature_prefix, string signature_hash, int offset_bigin, int offset_end)
 		{
 			string text = virus_name + " " + signature_length.ToString() + " " + signature_prefix.ToString() + " " +
 				signature_hash + " " + offset_bigin.ToString() + " " + offset_end.ToString();
-			Mutex_WWD.WaitOne();
-			using (StreamWriter writer = new StreamWriter(PATH_TO_DB_FILE, true, System.Text.Encoding.Default))
+			mutex_wwd.WaitOne();
+			try
 			{
-				writer.WriteLine(text);
+				using (StreamWriter writer = new StreamWriter(path_to_db_file, true, System.Text.Encoding.Default))
+				{
+					writer.WriteLine(text);
+				}
+			} catch (Exception)
+			{ }
+			finally
+			{
+				mutex_wwd.ReleaseMutex();
 			}
-			Mutex_WWD.ReleaseMutex();
+			
 		}
 
 
@@ -33,14 +41,18 @@ namespace SignatureBase
 		{
 			try
 			{
-				Mutex_WWD.WaitOne();
-				string line = File.ReadLines(PATH_TO_DB_FILE).ElementAt(number_line);
-				Mutex_WWD.ReleaseMutex();
+				mutex_wwd.WaitOne();
+				string line = File.ReadLines(path_to_db_file).ElementAt(number_line);
+				
 				return line;
 			}
 			catch (Exception)
 			{
 				return "-1";
+			}
+			finally
+			{
+				mutex_wwd.ReleaseMutex();
 			}
 		}
 

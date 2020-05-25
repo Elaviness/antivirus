@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scan
 {
-    class IObjectContent
+    class IObjectContent //изменить на интерфейс 
     {
 
         void Size_object() //Метод получения размера содержимого

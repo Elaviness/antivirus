@@ -11,21 +11,21 @@ namespace SignatureBase
         public string signature_hash; // SHA256-хэш сигнатуры
         public int offset_begin; //минимальное смещение первого символа сигнатуры относительно начала
         public int offset_end; //максимальное смещение от начала файла
-        public List<Signature> Signature_list = new List<Signature>();
-        readonly Work_with_data WWD = new Work_with_data();
+        public List<Signature> signature_list = new List<Signature>();
+        readonly Work_with_data wwd = new Work_with_data();
         public Signature() { } // конструктор
 
         // конструктор класса по атрибутам
-        public Signature(string name, int signature_length, string signature_prefix, string signature_hash, int offset_begin, int offset_end)
-        {
-            this.name = name;
-            this.signature_length = signature_length;
-            this.signature_prefix = signature_prefix;
-            this.signature_hash = signature_hash;
-            this.offset_begin = offset_begin;
-            this.offset_end = offset_end;
+        //private Signature(string name, int signature_length, string signature_prefix, string signature_hash, int offset_begin, int offset_end)
+        //{
+        //    this.name = name;
+        //    this.signature_length = signature_length;
+        //    this.signature_prefix = signature_prefix;
+        //    this.signature_hash = signature_hash;
+        //    this.offset_begin = offset_begin;
+        //    this.offset_end = offset_end;
 
-        }
+        //}
 
         //метод класса для разбиения прочитанной строки и создания экземпляра класса
         // с последующим добавлением этого экземпляра с список 
@@ -34,7 +34,7 @@ namespace SignatureBase
             string[] tmp = line.Split(new char[] { ' ' });
             try
             {
-                Signature_list.Add(new Signature
+                signature_list.Add(new Signature
                 {
                     name = tmp[0],
                     signature_length = Convert.ToInt16(tmp[1]),
@@ -43,6 +43,7 @@ namespace SignatureBase
                     offset_begin = Convert.ToInt16(tmp[4]),
                     offset_end = Convert.ToInt16(tmp[5])
                 });
+                signature_list.Sort();
             }
             catch (Exception) { }
         }
@@ -50,25 +51,25 @@ namespace SignatureBase
         //загрузка всех записей из файла в список
         public void Load_all_line_in_base()
         {
-            for (int i = 0; i < System.IO.File.ReadAllLines(WWD.PATH_TO_DB_FILE).Length; i++)
+            for (int i = 0; i < System.IO.File.ReadAllLines(wwd.path_to_db_file).Length; i++)
             {
-                LineSplit(WWD.Read_from_file_one_line(i));
+                LineSplit(wwd.Read_from_file_one_line(i));
             }
         }
 
         //Использует алгоритм двоичного поиска для нахождения определенного элемента в отсортированном списке
         public int Find_prefix(string region) 
         {
-            int size = Signature_list.Count,
+            int size = signature_list.Count,
                 low = 0,
                 high = size - 1;
             while (low <= high)
             {
                 int mid = (low + high) / 2;
-                if (region.Contains(Signature_list[mid].signature_prefix.ToString()))
+                if (region.Contains(signature_list[mid].signature_prefix.ToString()))
                     return mid;
                 else
-                    if (region.CompareTo(Signature_list[mid].signature_prefix) < 0)
+                    if (region.CompareTo(signature_list[mid].signature_prefix) < 0)
                 {
                     low = mid + 1;
                 }

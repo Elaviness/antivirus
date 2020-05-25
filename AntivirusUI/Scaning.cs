@@ -21,5 +21,17 @@ namespace AntivirusUI
         {
             Close();
         }
+
+        private void start_stop_button_Click(object sender, EventArgs e)
+        {
+            if (start_stop_button.Text == "Приостановить")
+            {
+                start_stop_button.Text = "Возобновить";
+            }
+            else
+            {
+                start_stop_button.Text = "Приостановить";
+            }
+        }
     }
 }
