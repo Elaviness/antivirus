@@ -45,7 +45,7 @@
             this.Break_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.Break_button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.Break_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Break_button.Location = new System.Drawing.Point(290, 181);
+            this.Break_button.Location = new System.Drawing.Point(295, 181);
             this.Break_button.Margin = new System.Windows.Forms.Padding(5);
             this.Break_button.Name = "Break_button";
             this.Break_button.Size = new System.Drawing.Size(168, 48);
@@ -138,7 +138,7 @@
             this.start_stop_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(33)))), ((int)(((byte)(43)))));
             this.start_stop_button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.start_stop_button.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.start_stop_button.Location = new System.Drawing.Point(104, 181);
+            this.start_stop_button.Location = new System.Drawing.Point(107, 181);
             this.start_stop_button.Margin = new System.Windows.Forms.Padding(5);
             this.start_stop_button.Name = "start_stop_button";
             this.start_stop_button.Size = new System.Drawing.Size(168, 48);
