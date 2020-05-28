@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using BinarySearchTree;
 
 namespace SignatureBase
 {
-    public class Signature : IComparable<Signature>/*, IComparer<Signature>*/
+    public class Signature : IComparable<Signature>
     {
         public string name;
         public int signature_length; // k символов сигнатуры (n<=k)
@@ -11,7 +13,8 @@ namespace SignatureBase
         public string signature_hash; // SHA256-хэш сигнатуры
         public int offset_begin; //минимальное смещение первого символа сигнатуры относительно начала
         public int offset_end; //максимальное смещение от начала файла
-        public List<Signature> signature_list = new List<Signature>();
+        private Dictionary<string,Signature> signature_dict = new Dictionary<string, Signature>(); //словарь для хранения Ключа-Префикса и Значения-Экземпляра класса
+        private Tree tree = new Tree();
         readonly Work_with_data wwd = new Work_with_data();
         public Signature() { } // конструктор
 
@@ -28,13 +31,13 @@ namespace SignatureBase
         //}
 
         //метод класса для разбиения прочитанной строки и создания экземпляра класса
-        // с последующим добавлением этого экземпляра с список 
+        // с последующим добавлением этого экземпляра с словарь и сохранением префикса в узле бинарного дерева
         public void LineSplit(string line)
         {
             string[] tmp = line.Split(new char[] { ' ' });
             try
             {
-                signature_list.Add(new Signature
+                signature_dict.Add(tmp[2], new Signature
                 {
                     name = tmp[0],
                     signature_length = Convert.ToInt16(tmp[1]),
@@ -43,7 +46,7 @@ namespace SignatureBase
                     offset_begin = Convert.ToInt16(tmp[4]),
                     offset_end = Convert.ToInt16(tmp[5])
                 });
-                signature_list.Sort();
+                tree.Add(tmp[2]);
             }
             catch (Exception) { }
         }
@@ -58,30 +61,35 @@ namespace SignatureBase
         }
 
         //Использует алгоритм двоичного поиска для нахождения определенного элемента в отсортированном списке
-        public int Find_prefix(string region) 
+        public string Find_prefix(string region) 
         {
-            int size = signature_list.Count,
-                low = 0,
-                high = size - 1;
-            while (low <= high)
+            string find_signature = "";
+            Node current = this.tree.Root;
+            for (int i = 0; i < region.Length;)
             {
-                int mid = (low + high) / 2;
-                if (region.Contains(signature_list[mid].signature_prefix.ToString()))
-                    return mid;
+                if (current.Data.CompareTo(region[i])==0)
+                {
+                    find_signature += current.Data;
+                    if (current.End)
+                        return find_signature;
+                    i++;
+                    current = current.Equal;
+                }
                 else
-                    if (region.CompareTo(signature_list[mid].signature_prefix) < 0)
                 {
-                    low = mid + 1;
-                }
+                    if (region[i] < current.Data)
+                        current = current.Left;
                     else
-                {
-                    high = mid - 1;
+                        if (region[i] > current.Data)
+                        current = current.Right;
                 }
+                if (current == null)
+                    break;
             }
-            return -1;
+            return "";
         }
 
-        //метод для сортировки списка бд (.Sort())
+        
         public int CompareTo(Signature other)                                    //   Этот метод использует Array.Sort, который применяет сортировку гибридности следующим образом:
         {                                                                        //   Если размер секции меньше 16 элементов или равен ему, он использует алгоритм сортировки вставки.
             return signature_prefix.CompareTo(other.signature_prefix);           //   Если количество секций превышает 2 log n, где n — диапазон входного массива, используется алгоритм хеапсорт.

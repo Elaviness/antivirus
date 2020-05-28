@@ -31,3 +31,15 @@ C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstan
 C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.AssemblyInfo.cs
 C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.dll
 C:\Users\Nikolay\Desktop\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.pdb
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.csprojAssemblyReference.cache
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.csproj.CoreCompileInputs.cache
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.AssemblyInfoInputs.cache
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.AssemblyInfo.cs
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.dll
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.pdb
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.deps.json
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.dll
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\SignatureBase.pdb
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.csproj.CopyComplete
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\TernarSearchTree.dll
+C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\TernarSearchTree.pdb
