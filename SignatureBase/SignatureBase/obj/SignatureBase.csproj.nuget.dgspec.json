@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Masha\\Desktop\\antivirus-master\\SignatureBase\\SignatureBase\\SignatureBase.csproj": {}
+    "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\SignatureBase\\SignatureBase\\SignatureBase.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Masha\\Desktop\\antivirus-master\\BinarySearchTree\\TernarSearchTree.csproj": {
+    "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Masha\\Desktop\\antivirus-master\\BinarySearchTree\\TernarSearchTree.csproj",
+        "projectUniqueName": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj",
         "projectName": "TernarSearchTree",
-        "projectPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\BinarySearchTree\\TernarSearchTree.csproj",
-        "packagesPath": "C:\\Users\\Masha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\BinarySearchTree\\obj\\",
+        "projectPath": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj",
+        "packagesPath": "C:\\Users\\Nikolay\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\BinarySearchTree\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Masha\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nikolay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -56,36 +55,35 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Masha\\Desktop\\antivirus-master\\SignatureBase\\SignatureBase\\SignatureBase.csproj": {
+    "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\SignatureBase\\SignatureBase\\SignatureBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Masha\\Desktop\\antivirus-master\\SignatureBase\\SignatureBase\\SignatureBase.csproj",
+        "projectUniqueName": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\SignatureBase\\SignatureBase\\SignatureBase.csproj",
         "projectName": "SignatureBase",
-        "projectPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\SignatureBase\\SignatureBase\\SignatureBase.csproj",
-        "packagesPath": "C:\\Users\\Masha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\SignatureBase\\SignatureBase\\obj\\",
+        "projectPath": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\SignatureBase\\SignatureBase\\SignatureBase.csproj",
+        "packagesPath": "C:\\Users\\Nikolay\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\SignatureBase\\SignatureBase\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Masha\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Nikolay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Masha\\Desktop\\antivirus-master\\BinarySearchTree\\TernarSearchTree.csproj": {
-                "projectPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\BinarySearchTree\\TernarSearchTree.csproj"
+              "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj": {
+                "projectPath": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj"
               }
             }
           }
@@ -116,7 +114,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
