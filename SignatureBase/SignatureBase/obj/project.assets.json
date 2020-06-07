@@ -200,11 +200,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Nikolay\\Desktop\\antivirus-master\\antivirus\\SignatureBase\\SignatureBase\\SignatureBase.csproj",
       "projectName": "SignatureBase",
       "projectPath": "C:\\Users\\Nikolay\\Desktop\\antivirus-master\\antivirus\\SignatureBase\\SignatureBase\\SignatureBase.csproj",
       "packagesPath": "C:\\Users\\Nikolay\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Nikolay\\Desktop\\antivirus-master\\antivirus\\SignatureBase\\SignatureBase\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\SignatureBase\\SignatureBase\\SignatureBase.csproj",
+      "projectName": "SignatureBase",
+      "projectPath": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\SignatureBase\\SignatureBase\\SignatureBase.csproj",
+      "packagesPath": "C:\\Users\\Nikolay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\SignatureBase\\SignatureBase\\obj\\",
+>>>>>>> a35ade3b19da70b08bec5cdf6c92c8055df1b077
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nikolay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -220,8 +228,13 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\Nikolay\\Desktop\\antivirus-master\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj": {
               "projectPath": "C:\\Users\\Nikolay\\Desktop\\antivirus-master\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj"
+=======
+            "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj": {
+              "projectPath": "C:\\Users\\Nikolay\\Desktop\\antivirus\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj"
+>>>>>>> a35ade3b19da70b08bec5cdf6c92c8055df1b077
             }
           }
         }
