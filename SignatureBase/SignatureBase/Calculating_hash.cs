@@ -6,8 +6,16 @@ namespace SignatureBase
     {
         public bool Check_hash(string line, string hash_record)
         {
-            var msgBytes = Encoding.ASCII.GetBytes(line);
+            hash_in_hex = Generate_hash(line);
+            if (string.Compare(hash_in_hex, hash_record) == 0)
+                return true;
+            else
+                return false;
+        }
 
+        public string Generate_hash(string line)
+        {
+            var msgBytes = Encoding.ASCII.GetBytes(line);
             var sha = new System.Security.Cryptography.SHA256Managed();
             var hash = sha.ComputeHash(msgBytes);
 
@@ -16,11 +24,8 @@ namespace SignatureBase
             {
                 hash_in_hex += b.ToString("x2");
             }
-            if (string.Compare(hash_in_hex, hash_record) == 0)
-                return true;
-            else
-                return false;
-
+            return hash_in_hex;
         }
+
     }
 }
