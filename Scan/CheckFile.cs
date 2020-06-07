@@ -46,11 +46,6 @@ namespace Scan
                                     return true;
                             }
                         }
-
-                        //if (buffer.Contains(PE))
-                        //{
-                        //    return true;
-                        //}
                         offset += readed;
                         if (offset > 1024)
                             return false;
