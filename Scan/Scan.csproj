@@ -49,5 +49,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScanReport.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SignatureBase\SignatureBase\SignatureBase.csproj">
+      <Project>{fee0a14c-9baa-4651-a17b-b66605b10a3d}</Project>
+      <Name>SignatureBase</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

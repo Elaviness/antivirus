@@ -34,12 +34,23 @@ namespace SignatureBase
             //else
             //    Console.WriteLine("Не найдено");
 
-            
-            Scan.CheckFile my_path = new Scan.CheckFile("C:\\Users\\Masha\\Desktop\\ВУЗ\\ТБД\\Курсовая итог.pdf");
+            Scan.ScanRegion my = new Scan.ScanRegion();
+            string path = "C:\\Python3\\python.exe";
+
+            Scan.CheckFile my_path = new Scan.CheckFile(path);
             bool result = my_path.IsFilePE();
 
             if (result)
-                Console.WriteLine("Execute file");
+            {
+                result = my.Block_split(path);  // Console.WriteLine("Execute file");
+                if (result)
+                    Console.WriteLine("Файл заражен");
+                else
+                {
+                    Console.WriteLine("Вредоносные сигнатуры не обнаружены");
+                }
+            }
+
             else
                 Console.WriteLine("Not execute file");
 
