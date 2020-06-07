@@ -91,14 +91,31 @@ namespace SignatureBase
 
         public bool FindSignature(string tmp)
         {
-            string wm_str= Find_prefix(tmp);
+            string buffer = tmp, to_hash_line = "";
+            string wm_str = Find_prefix(tmp);
             while (wm_str == "" && tmp != "")
             {
                 tmp = tmp.Substring(1);
                 wm_str = Find_prefix(tmp);
             }
             if (wm_str != "") //добавить сверку хэша найденного фрагмента и сигнатуры
-                return true;
+            {
+                if (signature_dict.TryGetValue(wm_str, out var value))
+                {
+                    if (tmp.Length >= value.signature_length)
+                    {
+                        for (int i = 0; i < value.signature_length; i++)
+                            to_hash_line += tmp[i];
+
+                        Calculating_hash calc_hash = new Calculating_hash();
+                        return calc_hash.Check_hash(to_hash_line, value.signature_hash);
+                    }
+                    else
+                        return false;
+                }
+                else
+                    return false;
+            }
             else
                 return false;
         }
