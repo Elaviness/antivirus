@@ -43,3 +43,6 @@ C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\bin\Debug\ne
 C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.csproj.CopyComplete
 C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\TernarSearchTree.dll
 C:\Users\Masha\Desktop\antivirus-master\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\TernarSearchTree.pdb
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\TernarSearchTree.dll
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\bin\Debug\netstandard2.0\TernarSearchTree.pdb
+C:\Users\Masha\source\repos\antivirus\SignatureBase\SignatureBase\obj\Debug\netstandard2.0\SignatureBase.csproj.CopyComplete
