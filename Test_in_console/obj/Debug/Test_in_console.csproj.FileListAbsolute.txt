@@ -47,3 +47,5 @@ C:\Users\Masha\Desktop\antivirus-master\Test_in_console\obj\Debug\Test_in_consol
 C:\Users\Masha\Desktop\antivirus-master\Test_in_console\obj\Debug\Test_in_console.pdb
 C:\Users\Masha\Desktop\antivirus-master\Test_in_console\bin\Debug\TernarSearchTree.dll
 C:\Users\Masha\Desktop\antivirus-master\Test_in_console\bin\Debug\TernarSearchTree.pdb
+C:\Users\Masha\Desktop\antivirus-master\Test_in_console\bin\Debug\Scan.dll
+C:\Users\Masha\Desktop\antivirus-master\Test_in_console\bin\Debug\Scan.pdb
