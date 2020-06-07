@@ -8,14 +8,14 @@ namespace SignatureBase
     {
         static void Main()
         {
-            //Signature my_sign = new Signature();
-            //Console.WriteLine("До сортировки по префиксу");
-            //string wm_str = "";
+            Signature my_sign = new Signature();
+            // Console.WriteLine("До сортировки по префиксу");
+            string wm_str = "";
 
-            //my_sign.LineSplit("Petya 6 hello jshgdfjsygdvhd 1 10");
-            //my_sign.LineSplit("Alesha 6 wo jshgdfjsygdvhd 1 10");
-            //my_sign.LineSplit("Zinaida 6 aloha jshgdfjsygdvhd 1 10");
-            //my_sign.LineSplit("Cactus 6 aut jshgdfjsygdvhd 1 10");
+            my_sign.LineSplit("Petya 6 hello jshgdfjsygdvhd 1 10");
+            my_sign.LineSplit("Alesha 6 wo jshgdfjsygdvhd 1 10");
+            my_sign.LineSplit("Zinaida 6 aloha jshgdfjsygdvhd 1 10");
+            my_sign.LineSplit("Cactus 6 aut jshgdfjsygdvhd 1 10");
 
 
             //Console.WriteLine("Результат проверки файла:");
@@ -34,8 +34,8 @@ namespace SignatureBase
             //else
             //    Console.WriteLine("Не найдено");
 
-            
-            Scan.CheckFile my_path = new Scan.CheckFile("C:\\Users\\Masha\\Desktop\\ВУЗ\\ТБД\\Курсовая итог.pdf");
+
+            Scan.CheckFile my_path = new Scan.CheckFile("C:\\Python3\\python.exe");
             bool result = my_path.IsFilePE();
 
             if (result)
