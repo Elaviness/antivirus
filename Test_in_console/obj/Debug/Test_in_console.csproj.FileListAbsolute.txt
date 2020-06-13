@@ -23,8 +23,6 @@ C:\Users\Masha\source\repos\antivirus\Test_in_console\obj\Debug\Test_in_console.
 C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Test_in_console.exe.config
 C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Test_in_console.exe
 C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Test_in_console.pdb
-C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\SignatureBase.dll
-C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\SignatureBase.pdb
 C:\Users\Masha\source\repos\antivirus\Test_in_console\obj\Debug\Test_in_console.csproj.CopyComplete
 C:\Users\Nikolay\Desktop\antivirus\Test_in_console\bin\Debug\Test_in_console.exe.config
 C:\Users\Nikolay\Desktop\antivirus\Test_in_console\bin\Debug\Test_in_console.exe
@@ -82,3 +80,7 @@ C:\Users\Masha\Desktop\antivirus-master\Antivirus\Test_in_console\obj\Debug\Test
 C:\Users\Masha\Desktop\antivirus-master\Antivirus\Test_in_console\obj\Debug\Test_in_console.pdb
 C:\Users\Masha\Desktop\antivirus-master\Antivirus\Test_in_console\bin\Debug\Signature_Base.dll
 C:\Users\Masha\Desktop\antivirus-master\Antivirus\Test_in_console\bin\Debug\Signature_Base.pdb
+C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Signature_Base.dll
+C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\ScanObjectBuilder.dll
+C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Signature_Base.pdb
+C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\ScanObjectBuilder.pdb

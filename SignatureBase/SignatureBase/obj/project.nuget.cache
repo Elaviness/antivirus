@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QAHSP9AbXNetg/zBiBSJKdmATN002QhFaIldhwa2jvL+WwNVp0KDaUPBeF3ALqtJbNKj93Q+9nr1xQ4I3IMxBw==",
+  "dgSpecHash": "w7IvSiZWs1EFDCODVVqkDxobHgAUTs1U1c3vZf39dr62TKZJcjqnQsbDwfsvfRPkb3smuGpbAZz1FRgSG4Hd1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\SignatureBase\\SignatureBase\\Signature_Base.csproj",
+  "projectFilePath": "C:\\Users\\Masha\\source\\repos\\antivirus\\SignatureBase\\SignatureBase\\Signature_Base.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

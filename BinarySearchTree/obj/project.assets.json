@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\BinarySearchTree\\TernarSearchTree.csproj",
+      "projectUniqueName": "C:\\Users\\Masha\\source\\repos\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj",
       "projectName": "TernarSearchTree",
-      "projectPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\BinarySearchTree\\TernarSearchTree.csproj",
+      "projectPath": "C:\\Users\\Masha\\source\\repos\\antivirus\\BinarySearchTree\\TernarSearchTree.csproj",
       "packagesPath": "C:\\Users\\Masha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\BinarySearchTree\\obj\\",
+      "outputPath": "C:\\Users\\Masha\\source\\repos\\antivirus\\BinarySearchTree\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

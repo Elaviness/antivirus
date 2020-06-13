@@ -74,7 +74,8 @@ namespace Scan
 
                             using (StreamReader buffer = new StreamReader(entry.Open(), Encoding.Default))
                             {
-                                Console.WriteLine(entry.Name);
+                                // Console.WriteLine(entry.Name);
+                                string tmp_str;
                                 int blockSize = 4*1024;
                                 char[] tmp = new char[blockSize];
                                 int offset = 0;
@@ -88,7 +89,8 @@ namespace Scan
                                         {
                                             return false;
                                         }
-                                        flag = signature.FindSignature(tmp.ToString());
+                                        tmp_str = new string(tmp);
+                                        flag = signature.FindSignature(tmp_str);
                                         if (flag)
                                            return flag;
                                         offset += readed;
