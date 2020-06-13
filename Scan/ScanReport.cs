@@ -19,7 +19,7 @@ namespace Scan
 
         Stopwatch stop_watch = new Stopwatch();
 
-        ScanReport()
+        public ScanReport()
         {
             total_checked_file = 0;
             stop_watch.Start();

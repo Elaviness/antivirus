@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,17 @@ namespace Scan
                     }
                 }
             }
+        }
+
+        public bool IsFileZip()
+        {
+            string path = this.file_path;
+            FileInfo check = new FileInfo(path);
+            if (check.Extension == ".zip")
+                return true;
+            else
+                return false;
+
         }
     }
 }

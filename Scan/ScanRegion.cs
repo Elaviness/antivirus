@@ -1,9 +1,11 @@
 ﻿using System;
+using System.IO;
+using System.IO.Compression;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+
 using SignatureBase;
 
 namespace Scan
@@ -22,15 +24,14 @@ namespace Scan
 
         }
 
-        public bool Block_split(string path) //Метод блочного чтения заданного региона
+        public bool Block_split(string path, Signature signature) //Метод блочного чтения заданного региона
         {
             // разбить файл на регионы (делим на BLOCK_SIZE)
             // создать список регионов, являющихся экземплярами класса ScanRegion
             // читаем каждый полученный блок и вызываем проверку из SignatureIO
 
-            const int blockSize = 1024;
+            const int blockSize = 4*1024;
             bool flag = false;
-            Signature tmp = new Signature();
             //Crypting function
             byte[] buffer = new byte[blockSize];
 
@@ -45,16 +46,67 @@ namespace Scan
                         readed = f.Read(buffer, offset, blockSize - offset);
                         if (readed == 0) // End of file
                         {
-                            break;
+                            return flag; ;
                         }
-                        flag = tmp.FindSignature(Encoding.Default.GetString(buffer));
+                        flag = signature.FindSignature(Encoding.Default.GetString(buffer));
                         if (flag)
                             return flag;
                         offset += readed;
                     }
-                    return flag;
+                    
                 }
-                
+                // return flag;
+            }
+        }
+
+        public bool blockSplitZip(string path, Signature signature) //Метод блочного чтения и проверки Zip-архива
+        {
+            bool flag;
+
+            using (FileStream zipToOpen = new FileStream(path, FileMode.Open))
+            {
+                using (ZipArchive archive = new ZipArchive(zipToOpen, ZipArchiveMode.Read))
+                {
+                    foreach (ZipArchiveEntry entry in archive.Entries)
+                    {
+                        if (entry.Name != "" && entry.Name.EndsWith(".exe"))
+                        {
+
+                            using (StreamReader buffer = new StreamReader(entry.Open(), Encoding.Default))
+                            {
+                                Console.WriteLine(entry.Name);
+                                int blockSize = 4*1024;
+                                char[] tmp = new char[blockSize];
+                                int offset = 0;
+                                int readed = buffer.Read(tmp, offset, blockSize);
+                                while (readed > 0)
+                                {
+                                    for (offset = 0; offset < blockSize;)
+                                    {
+                                        readed = buffer.Read(tmp, offset, blockSize - offset);
+                                        if (readed == 0) // End of file
+                                        {
+                                            return false;
+                                        }
+                                        flag = signature.FindSignature(tmp.ToString());
+                                        if (flag)
+                                           return flag;
+                                        offset += readed;
+                                    }
+                                    //Console.WriteLine(tmp);
+                                    //offset += readed;
+                                    //readed = buffer.Read(tmp, offset, blockSize - offset);
+                                }
+
+
+
+                            }
+                        }
+                    }
+                    return false;
+
+
+                }
             }
         }
     }

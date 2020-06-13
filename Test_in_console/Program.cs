@@ -16,6 +16,7 @@ namespace SignatureBase
             my_sign.LineSplit("Alesha 6 wo jshgdfjsygdvhd 1 10");
             my_sign.LineSplit("Zinaida 6 aloha jshgdfjsygdvhd 1 10");
             my_sign.LineSplit("Cactus 6 aut jshgdfjsygdvhd 1 10");
+            my_sign.LineSplit("AMware 15 Pugacheva bd075f82293b04a2061c925220dde350b16b43e9d01198f8d692266fd8040c33 40000 48576");
 
 
             //Console.WriteLine("Результат проверки файла:");
@@ -34,12 +35,22 @@ namespace SignatureBase
             //else
             //    Console.WriteLine("Не найдено");
 
-
-            Scan.CheckFile my_path = new Scan.CheckFile("C:\\Python3\\python.exe");
-            bool result = my_path.IsFilePE();
+            Scan.ScanRegion my = new Scan.ScanRegion();
+            string path = @"C:\Users\Masha\Desktop\test.zip";
+            Scan.CheckFile my_path = new Scan.CheckFile(path);
+            bool result = my_path.IsFileZip();
 
             if (result)
-                Console.WriteLine("Execute file");
+            {
+                result = my.blockSplitZip(path, my_sign); // 
+
+                if (result)
+                {
+                    Console.WriteLine("Файл заражен");
+                }
+                else
+                    Console.WriteLine("Вредоносные сигнатуры не обнаружены");
+            }
             else
                 Console.WriteLine("Not execute file");
 

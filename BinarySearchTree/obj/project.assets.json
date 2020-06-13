@@ -25,16 +25,6 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
-      },
-      "TernarSearchTree/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/TernarSearchTree.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/TernarSearchTree.dll": {}
-        }
       }
     }
   },
@@ -60,6 +50,7 @@
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -181,17 +172,11 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "TernarSearchTree/1.0.0": {
-      "type": "project",
-      "path": "../../BinarySearchTree/TernarSearchTree.csproj",
-      "msbuildProject": "../../BinarySearchTree/TernarSearchTree.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3",
-      "TernarSearchTree >= 1.0.0"
+      "NETStandard.Library >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -201,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\SignatureBase\\SignatureBase\\Signature_Base.csproj",
-      "projectName": "Signature_Base",
-      "projectPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\SignatureBase\\SignatureBase\\Signature_Base.csproj",
+      "projectUniqueName": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\BinarySearchTree\\TernarSearchTree.csproj",
+      "projectName": "TernarSearchTree",
+      "projectPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\BinarySearchTree\\TernarSearchTree.csproj",
       "packagesPath": "C:\\Users\\Masha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\SignatureBase\\SignatureBase\\obj\\",
+      "outputPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\BinarySearchTree\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -221,11 +206,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\BinarySearchTree\\TernarSearchTree.csproj": {
-              "projectPath": "C:\\Users\\Masha\\Desktop\\antivirus-master\\Antivirus\\BinarySearchTree\\TernarSearchTree.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

@@ -54,9 +54,9 @@
       <Project>{d8353cd5-1cbb-47a0-9761-8b00f2350cf8}</Project>
       <Name>Scan</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SignatureBase\SignatureBase\SignatureBase.csproj">
+    <ProjectReference Include="..\SignatureBase\SignatureBase\Signature_Base.csproj">
       <Project>{fee0a14c-9baa-4651-a17b-b66605b10a3d}</Project>
-      <Name>SignatureBase</Name>
+      <Name>Signature_Base</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -40,11 +40,11 @@ namespace SignatureBase
                 signature_dict.Add(tmp[2], new Signature
                 {
                     name = tmp[0],
-                    signature_length = Convert.ToInt16(tmp[1]),
+                    signature_length = Convert.ToInt32(tmp[1]),
                     signature_prefix = tmp[2],
                     signature_hash = tmp[3],
-                    offset_begin = Convert.ToInt16(tmp[4]),
-                    offset_end = Convert.ToInt16(tmp[5])
+                    offset_begin = Convert.ToInt32(tmp[4]),
+                    offset_end = Convert.ToInt32(tmp[5])
                 });
                 tree.Add(tmp[2]);
             }
@@ -64,7 +64,7 @@ namespace SignatureBase
         private string Find_prefix(string region) 
         {
             string find_signature = "";
-            Node current = tree.Root;
+            Node current = this.tree.Root;
             for (int i = 0; i < region.Length;)
             {
                 if (current.Data.CompareTo(region[i])==0)
