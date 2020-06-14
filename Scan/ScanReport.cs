@@ -8,21 +8,16 @@ using System.Threading.Tasks;
 
 namespace Scan
 {
-    class ScanReport
+    public class ScanReport
     {
         string path_to_infected_file,
                virus_name;
-        int total_checked_file
-        {
-            get{return total_checked_file;}
-            set {}
-        }
+        public int total_checked_file = 0;
 
         private Stopwatch stop_watch = new Stopwatch();
 
         public ScanReport()
         {
-            total_checked_file = 0;
             stop_watch.Start();
             try
             {
@@ -62,7 +57,7 @@ namespace Scan
         private void Write_report_to_file(string elapsed_time)
         {
             const string PATH_TO_REPORT_FILE = "C:\\Temp\\AntivirusReportFile.txt";
-            DateTime this_day = DateTime.Today;
+            DateTime this_day = DateTime.Now;
             try 
             { 
                 using (StreamWriter sw = new StreamWriter(PATH_TO_REPORT_FILE, true, Encoding.Default))

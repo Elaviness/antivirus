@@ -11,11 +11,19 @@ namespace Scan
     public class ScanBuilder
     {
         public Dictionary<string, string> infected_files = new Dictionary<string, string>();
+        ScanReport scn_report;
+        ScanObject scanObject = new ScanObject();
+        string not_a_virus = "";
+
+        public ScanBuilder(ScanReport scn_report)
+        {
+            this.scn_report = scn_report;
+        }
 
         public bool Object_builder(string path_to_file, Signature sgntr, ref string virus_name, ref string path_to_infected_file)
         {
             CheckFile chck_file = new CheckFile(path_to_file);
-            ScanObject scanObject = new ScanObject();
+           
             if (chck_file.IsFilePE())
             {
                 if (scanObject.Block_read(1, path_to_file, sgntr, ref virus_name, ref path_to_infected_file))
@@ -24,7 +32,10 @@ namespace Scan
                     return true;
                 }
                 else
-                    return false ;// flag = 1;
+                {
+                    scn_report.Add_record(false, not_a_virus, not_a_virus);
+                    return false;// flag = 1;
+                }
             }
             else
             {
@@ -36,8 +47,10 @@ namespace Scan
                         return true;
                     }
                     else
+                    {
+                        scn_report.Add_record(false, not_a_virus, not_a_virus);
                         return false;
-
+                    }
                 }
                 else
                 {
@@ -47,7 +60,10 @@ namespace Scan
                         return false;
                     }
                     else
+                    {
+                        scn_report.Add_record(false, not_a_virus, not_a_virus);
                         return false;
+                    }
                 }
             }
         }
