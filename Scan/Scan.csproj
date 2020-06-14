@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CheckFile.cs" />
     <Compile Include="DirectoryMonitor.cs" />
     <Compile Include="IObjectContent.cs" />
     <Compile Include="ScanEngine.cs" />
@@ -62,10 +61,6 @@
     <Compile Include="ScanReport.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ScanObjectBuilder\ScanObjectBuilder.csproj">
-      <Project>{95b76f48-97c1-4f5d-b2ce-f7a9cc9746c4}</Project>
-      <Name>ScanObjectBuilder</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SignatureBase\SignatureBase\Signature_Base.csproj">
       <Project>{fee0a14c-9baa-4651-a17b-b66605b10a3d}</Project>
       <Name>Signature_Base</Name>

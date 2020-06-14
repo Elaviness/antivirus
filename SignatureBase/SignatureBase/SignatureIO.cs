@@ -89,9 +89,9 @@ namespace SignatureBase
             return "";
         }
 
-        public bool FindSignature(string tmp)
+        public bool FindSignature(string tmp, ref string virus_name)
         {
-            string buffer = tmp, to_hash_line = "";
+            string buffer = tmp, to_hash_line = ""; 
             string wm_str = Find_prefix(tmp);
             while (wm_str == "" && tmp != "")
             {
@@ -101,14 +101,20 @@ namespace SignatureBase
             if (wm_str != "") //добавить сверку хэша найденного фрагмента и сигнатуры
             {
                 if (signature_dict.TryGetValue(wm_str, out var value))
-                {
+                {   
                     if (tmp.Length >= value.signature_length)
                     {
                         for (int i = 0; i < value.signature_length; i++)
                             to_hash_line += tmp[i];
 
                         Calculating_hash calc_hash = new Calculating_hash();
-                        return calc_hash.Check_hash(to_hash_line, value.signature_hash);
+                        if (calc_hash.Check_hash(to_hash_line, value.signature_hash))
+                        {
+                            virus_name = value.name;
+                            return true;
+                        }
+                        else
+                            return false;                       
                     }
                     else
                         return false;

@@ -41,9 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CheckFile.cs" />
+    <Compile Include="ScanBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchFileInDirectory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scan\Scan.csproj">
+      <Project>{d8353cd5-1cbb-47a0-9761-8b00f2350cf8}</Project>
+      <Name>Scan</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

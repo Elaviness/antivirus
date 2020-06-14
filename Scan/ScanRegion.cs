@@ -24,7 +24,7 @@ namespace Scan
 
         }
 
-        public bool Block_split(string path, Signature signature) //Метод блочного чтения заданного региона
+        public bool Block_read(string path, Signature signature, ref string virus_name) //Метод блочного чтения заданного региона
         {
             // разбить файл на регионы (делим на BLOCK_SIZE)
             // создать список регионов, являющихся экземплярами класса ScanRegion
@@ -48,7 +48,7 @@ namespace Scan
                         {
                             return flag; ;
                         }
-                        flag = signature.FindSignature(Encoding.Default.GetString(buffer));
+                        flag = signature.FindSignature(Encoding.Default.GetString(buffer), ref virus_name);
                         if (flag)
                             return flag;
                         offset += readed;
@@ -59,7 +59,7 @@ namespace Scan
             }
         }
 
-        public bool blockSplitZip(string path, Signature signature) //Метод блочного чтения и проверки Zip-архива
+        public bool blockSplitZip(string path, Signature signature, ref string virus_name) //Метод блочного чтения и проверки Zip-архива
         {
             bool flag;
 
@@ -90,7 +90,7 @@ namespace Scan
                                             return false;
                                         }
                                         tmp_str = new string(tmp);
-                                        flag = signature.FindSignature(tmp_str);
+                                        flag = signature.FindSignature(tmp_str, ref virus_name);
                                         if (flag)
                                            return flag;
                                         offset += readed;
