@@ -40,12 +40,12 @@
             this.listBox1.ItemHeight = 21;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(515, 529);
+            this.listBox1.Size = new System.Drawing.Size(1034, 529);
             this.listBox1.TabIndex = 0;
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(402, 557);
+            this.buttonExit.Location = new System.Drawing.Point(921, 559);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(125, 36);
             this.buttonExit.TabIndex = 1;
@@ -58,7 +58,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(47)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(542, 607);
+            this.ClientSize = new System.Drawing.Size(1058, 607);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.listBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
