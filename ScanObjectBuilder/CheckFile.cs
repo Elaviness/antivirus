@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ScanObjectBuilder
+namespace Scan
 {
     public class CheckFile
     {
-        string file_path;
+        private string file_path;
         public CheckFile(string path)
         {
             file_path = path;
@@ -72,6 +72,20 @@ namespace ScanObjectBuilder
                 else
                     return false;
             } catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool IsFileDir()
+        {
+            string path = file_path;
+            try
+            {
+                DirectoryInfo dir = new DirectoryInfo(path);
+                return dir.Exists;
+            }
+            catch (Exception)
             {
                 return false;
             }

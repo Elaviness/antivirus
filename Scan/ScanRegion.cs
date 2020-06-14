@@ -12,28 +12,19 @@ namespace Scan
 {
     public class ScanRegion
     {
-        int sigment_size, //Размер сегмента
-            scan_offset_begin; //Смещение относительно начала контента
+        private const int BLOCK_SIZE = 4 * 1024; // 1 кбайт
 
-        const int BLOCK_SIZE = 8 * 1024; // 1 кбайт
+        public ScanRegion(){}
 
-        //IObjectContent IOC = new IObjectContent(); //Объект IObjectContent
-
-        public ScanRegion()
-        {
-
-        }
-
-        public bool Block_read(string path, Signature signature, ref string virus_name) //Метод блочного чтения заданного региона
+        public bool Block_read(string path, Signature signature, ref string virus_name, ref string path_to_infected_file) //Метод блочного чтения заданного региона
         {
             // разбить файл на регионы (делим на BLOCK_SIZE)
             // создать список регионов, являющихся экземплярами класса ScanRegion
             // читаем каждый полученный блок и вызываем проверку из SignatureIO
 
-            const int blockSize = 4*1024;
             bool flag = false;
             //Crypting function
-            byte[] buffer = new byte[blockSize];
+            byte[] buffer = new byte[BLOCK_SIZE];
 
             using (var f = File.OpenRead(path))
             {
@@ -41,16 +32,19 @@ namespace Scan
                 {
                     int readed;
                     int offset;
-                    for (offset = 0; offset < blockSize;)
+                    for (offset = 0; offset < BLOCK_SIZE;)
                     {
-                        readed = f.Read(buffer, offset, blockSize - offset);
+                        readed = f.Read(buffer, offset, BLOCK_SIZE - offset);
                         if (readed == 0) // End of file
                         {
                             return flag; ;
                         }
                         flag = signature.FindSignature(Encoding.Default.GetString(buffer), ref virus_name);
                         if (flag)
+                        {
+                            path_to_infected_file = path;
                             return flag;
+                        }
                         offset += readed;
                     }
                     
@@ -59,7 +53,7 @@ namespace Scan
             }
         }
 
-        public bool blockSplitZip(string path, Signature signature, ref string virus_name) //Метод блочного чтения и проверки Zip-архива
+        public bool blockSplitZip(string path, Signature signature, ref string virus_name, ref string path_to_infected_file) //Метод блочного чтения и проверки Zip-архива
         {
             bool flag;
 
@@ -74,17 +68,15 @@ namespace Scan
 
                             using (StreamReader buffer = new StreamReader(entry.Open(), Encoding.Default))
                             {
-                                // Console.WriteLine(entry.Name);
                                 string tmp_str;
-                                int blockSize = 4*1024;
-                                char[] tmp = new char[blockSize];
+                                char[] tmp = new char[BLOCK_SIZE];
                                 int offset = 0;
-                                int readed = buffer.Read(tmp, offset, blockSize);
+                                int readed = buffer.Read(tmp, offset, BLOCK_SIZE);
                                 while (readed > 0)
                                 {
-                                    for (offset = 0; offset < blockSize;)
+                                    for (offset = 0; offset < BLOCK_SIZE;)
                                     {
-                                        readed = buffer.Read(tmp, offset, blockSize - offset);
+                                        readed = buffer.Read(tmp, offset, BLOCK_SIZE - offset);
                                         if (readed == 0) // End of file
                                         {
                                             return false;
@@ -92,22 +84,17 @@ namespace Scan
                                         tmp_str = new string(tmp);
                                         flag = signature.FindSignature(tmp_str, ref virus_name);
                                         if (flag)
-                                           return flag;
+                                        {
+                                            path_to_infected_file = path;
+                                            return flag;
+                                        }
                                         offset += readed;
                                     }
-                                    //Console.WriteLine(tmp);
-                                    //offset += readed;
-                                    //readed = buffer.Read(tmp, offset, blockSize - offset);
                                 }
-
-
-
                             }
                         }
                     }
                     return false;
-
-
                 }
             }
         }

@@ -10,7 +10,7 @@ namespace Scan
 {
     public class CheckFile
     {
-        string file_path;
+        private string file_path;
         public CheckFile(string path)
         {
             file_path = path;
@@ -25,45 +25,70 @@ namespace Scan
             //Crypting function
             byte[] buffer = new byte[blockSize];
 
-            using (var f = File.OpenRead(path))
+            try
             {
-                while (true)
+                using (var f = File.OpenRead(path))
                 {
-                    int readed;
-                    int offset;
-                    for (offset = 0; offset < blockSize;)
+                    while (true)
                     {
-                        readed = f.Read(buffer, offset, blockSize - offset);
-                        if (readed == 0) // End of file
+                        int readed;
+                        int offset;
+                        for (offset = 0; offset < blockSize;)
                         {
-                            return false;
-                        }
-
-                        for (int i = 0; i <= blockSize-4; i++)
-                        {
-                            if (buffer[i] == PE[0])
+                            readed = f.Read(buffer, offset, blockSize - offset);
+                            if (readed == 0) // End of file
                             {
-                                if (buffer[i + 1] == PE[1] && buffer[i + 2] == PE[2] && buffer[i + 3] == PE[3])
-                                    return true;
+                                return false;
                             }
+
+                            for (int i = 0; i <= blockSize - 4; i++)
+                            {
+                                if (buffer[i] == PE[0])
+                                {
+                                    if (buffer[i + 1] == PE[1] && buffer[i + 2] == PE[2] && buffer[i + 3] == PE[3])
+                                        return true;
+                                }
+                            }
+                            offset += readed;
+                            if (offset > 1024)
+                                return false;
                         }
-                        offset += readed;
-                        if (offset > 1024)
-                            return false;
                     }
-                }
+                } 
+            } catch (Exception)
+            {
+                return false;
             }
         }
 
         public bool IsFileZip()
         {
             string path = this.file_path;
-            FileInfo check = new FileInfo(path);
-            if (check.Extension == ".zip")
-                return true;
-            else
+            try
+            {
+                FileInfo check = new FileInfo(path);
+                if (check.Extension == ".zip")
+                    return true;
+                else
+                    return false;
+            } catch (Exception)
+            {
                 return false;
+            }
+        }
 
+        public bool IsFileDir()
+        {
+            string path = file_path;
+            try
+            {
+                DirectoryInfo dir = new DirectoryInfo(path);
+                return dir.Exists;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ScanObjectBuilder
+namespace Scan
 {
     class ScanReport
     {
@@ -18,7 +18,7 @@ namespace ScanObjectBuilder
             set {}
         }
 
-        Stopwatch stop_watch = new Stopwatch();
+        private Stopwatch stop_watch = new Stopwatch();
 
         public ScanReport()
         {

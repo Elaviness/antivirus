@@ -10,22 +10,13 @@ namespace Scan
 {
     public class ScanObject
     {
-        string file_name, //для файлов имя файла
-               file_path; //путь до объекта
-
-        bool start_scan_object = false, //флаги, сигнализирующие о начале и конце файла
-             end_scan_object = false,  // ..
-             start_object_region = false, //флаги, сигнализирующие о начале и конце блока 
-             end_object_region = false; // ..
-
-
-        List<ScanRegion> region_list = new List<ScanRegion> { }; //Список регионов ScanRegion для сканирования
+        public List<ScanRegion> region_list = new List<ScanRegion> { }; //Список регионов ScanRegion для сканирования
         //Список подобъектов
 
         public ScanObject() { }
 
 
-        public bool Block_read(int type, string path, Signature sgntr, ref string virus_name)
+        public bool Block_read(int type, string path, Signature sgntr, ref string virus_name, ref string path_to_infected_file)
         {
             bool result = false;
             ScanRegion scanRegion = new ScanRegion();
@@ -33,17 +24,13 @@ namespace Scan
             switch (type)
             {
                 case 1:
-                    result = scanRegion.Block_read(path, sgntr, ref virus_name);
+                    result = scanRegion.Block_read(path, sgntr, ref virus_name, ref path_to_infected_file);
                     return result;
                 case 2: // сохраняет список всех элементов в архиве и для каждого вызывает блочное чтение
-                    return scanRegion.blockSplitZip(path, sgntr, ref virus_name);
+                    return scanRegion.blockSplitZip(path, sgntr, ref virus_name, ref path_to_infected_file);
             }
             return false;
         }
 
-            void IObjectContent.Size_object()
-        {
-
-        }
     }
 }
