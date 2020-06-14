@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScaningResult));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.buttonExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -44,7 +45,7 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(402, 563);
+            this.buttonExit.Location = new System.Drawing.Point(402, 557);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(125, 36);
             this.buttonExit.TabIndex = 1;
@@ -57,14 +58,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(47)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(542, 611);
+            this.ClientSize = new System.Drawing.Size(542, 607);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.listBox1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "ScaningResult";
-            this.Text = "ScaningResult";
+            this.Text = "Результаты сканирований";
             this.Load += new System.EventHandler(this.ScaningResult_Load);
             this.ResumeLayout(false);
 

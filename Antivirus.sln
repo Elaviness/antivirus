@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Signature_Base", "SignatureBase\SignatureBase\Signature_Base.csproj", "{FEE0A14C-9BAA-4651-A17B-B66605B10A3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_in_console", "Test_in_console\Test_in_console.csproj", "{8CF1337D-3813-4C5A-87F1-3A980B5894CC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scan", "Scan\Scan.csproj", "{D8353CD5-1CBB-47A0-9761-8B00F2350CF8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntivirusService", "AntivirusService\AntivirusService.csproj", "{32BCA2E2-B198-4D24-A6F2-99032949FC1A}"
@@ -25,10 +23,6 @@ Global
 		{FEE0A14C-9BAA-4651-A17B-B66605B10A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE0A14C-9BAA-4651-A17B-B66605B10A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE0A14C-9BAA-4651-A17B-B66605B10A3D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8CF1337D-3813-4C5A-87F1-3A980B5894CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CF1337D-3813-4C5A-87F1-3A980B5894CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CF1337D-3813-4C5A-87F1-3A980B5894CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CF1337D-3813-4C5A-87F1-3A980B5894CC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D8353CD5-1CBB-47A0-9761-8B00F2350CF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8353CD5-1CBB-47A0-9761-8B00F2350CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8353CD5-1CBB-47A0-9761-8B00F2350CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
