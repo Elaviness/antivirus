@@ -37,5 +37,11 @@ namespace AntivirusUI
             sc.sgnt = this.sgnt;
             sc.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ScaningResult sr = new ScaningResult();
+            sr.Show();
+        }
     }
 }

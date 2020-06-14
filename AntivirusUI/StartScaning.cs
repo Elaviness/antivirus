@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Scan;
@@ -19,10 +13,7 @@ namespace AntivirusUI
             InitializeComponent();
         }
 
-        private void StartScaning_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void StartScaning_Load(object sender, EventArgs e){ }
 
         private void StartScaningButton_Click(object sender, EventArgs e)
         {
@@ -30,13 +21,24 @@ namespace AntivirusUI
             {
                 ScanEngine scn_engine = new ScanEngine(textBox1.Text);
                 Close();
-                Scaning scn_window = new Scaning();
+                Scaning scn_window = new Scaning(scn_engine);
                 scn_window.Show();
-                scn_engine.Start_scaning(sgnt);
+                Start_scaning(scn_engine);
+
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private async void Start_scaning(ScanEngine scn_engine)
+        {
+
+            await Task.Run(() =>
+            {
+                scn_engine.Start_scaning(sgnt);
+                
+            });    
         }
     }
 }

@@ -60,6 +60,12 @@
     <Compile Include="Scaning.Designer.cs">
       <DependentUpon>Scaning.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScaningResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScaningResult.Designer.cs">
+      <DependentUpon>ScaningResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartScaning.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </Compile>
     <EmbeddedResource Include="Scaning.resx">
       <DependentUpon>Scaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScaningResult.resx">
+      <DependentUpon>ScaningResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartScaning.resx">
       <DependentUpon>StartScaning.cs</DependentUpon>
