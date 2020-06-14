@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Scaning));
             this.Break_button = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -39,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.start_stop_button = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // Break_button
@@ -120,9 +122,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(165, 89);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(19, 21);
+            this.label6.Size = new System.Drawing.Size(37, 21);
             this.label6.TabIndex = 7;
-            this.label6.Text = "0";
+            this.label6.Text = "0 c.";
             // 
             // label7
             // 
@@ -147,6 +149,11 @@
             this.start_stop_button.Text = "Приостановить";
             this.start_stop_button.UseVisualStyleBackColor = false;
             this.start_stop_button.Click += new System.EventHandler(this.start_stop_button_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Scaning
             // 
@@ -180,7 +187,6 @@
         #endregion
 
         private System.Windows.Forms.Button Break_button;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -189,5 +195,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button start_stop_button;
+        public System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.ProgressBar progressBar1;
     }
 }

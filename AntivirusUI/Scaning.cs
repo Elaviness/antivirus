@@ -13,6 +13,8 @@ namespace AntivirusUI
     public partial class Scaning : Form
     {
         ScanEngine scn_engine;
+
+        int time = 0;
         public Scaning(ScanEngine scn_engine)
         {
             InitializeComponent();
@@ -36,7 +38,17 @@ namespace AntivirusUI
             }
         }
 
-        private void Scaning_Load(object sender, EventArgs e){}
+        private void Scaning_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            time++;
+            label6.Text = time.ToString() + " с.";
+            if (progressBar1.Value < 100)
+                progressBar1.Value += 1;
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace AntivirusUI
                 Close();
                 Scaning scn_window = new Scaning(scn_engine);
                 scn_window.Show();
-                Start_scaning(scn_engine);
+                Start_scaning(scn_engine, scn_window);
 
             } catch (Exception ex)
             {
@@ -31,14 +31,16 @@ namespace AntivirusUI
             }
         }
 
-        private async void Start_scaning(ScanEngine scn_engine)
+        private async void Start_scaning(ScanEngine scn_engine, Scaning scn_window)
         {
 
             await Task.Run(() =>
             {
                 scn_engine.Start_scaning(sgnt);
                 
-            });    
+            });
+            scn_window.timer1.Enabled = false;
+            scn_window.progressBar1.Value = 100;
         }
     }
 }
