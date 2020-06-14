@@ -39,7 +39,7 @@ namespace Scan
                         {
                             return flag; ;
                         }
-                        flag = signature.FindSignature(Encoding.Default.GetString(buffer), ref virus_name);
+                        flag = signature.FindSignature(Encoding.Default.GetString(buffer),signature, ref virus_name);
                         if (flag)
                         {
                             path_to_infected_file = path;
@@ -82,7 +82,7 @@ namespace Scan
                                             return false;
                                         }
                                         tmp_str = new string(tmp);
-                                        flag = signature.FindSignature(tmp_str, ref virus_name);
+                                        flag = signature.FindSignature(tmp_str,signature, ref virus_name);
                                         if (flag)
                                         {
                                             path_to_infected_file = path;

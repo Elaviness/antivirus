@@ -57,10 +57,10 @@ namespace SignatureBase
 
 
         //Использует алгоритм двоичного поиска для нахождения определенного элемента в отсортированном списке
-        private string Find_prefix(string region) 
+        private string Find_prefix(string region, Signature signature) 
         {
             string find_signature = "";
-            Node current = this.tree.Root;
+            Node current = signature.tree.Root;
             for (int i = 0; i < region.Length;)
             {
                 if (current.Data.CompareTo(region[i])==0)
@@ -85,14 +85,14 @@ namespace SignatureBase
             return "";
         }
 
-        public bool FindSignature(string tmp, ref string virus_name)
+        public bool FindSignature(string tmp, Signature signature,ref string virus_name)
         {
             string buffer = tmp, to_hash_line = ""; 
-            string wm_str = Find_prefix(tmp);
+            string wm_str = Find_prefix(tmp, signature);
             while (wm_str == "" && tmp != "")
             {
                 tmp = tmp.Substring(1);
-                wm_str = Find_prefix(tmp);
+                wm_str = Find_prefix(tmp,signature);
             }
             if (wm_str != "") //добавить сверку хэша найденного фрагмента и сигнатуры
             {

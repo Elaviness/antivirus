@@ -81,9 +81,7 @@ C:\Users\Masha\Desktop\antivirus-master\Antivirus\Test_in_console\obj\Debug\Test
 C:\Users\Masha\Desktop\antivirus-master\Antivirus\Test_in_console\bin\Debug\Signature_Base.dll
 C:\Users\Masha\Desktop\antivirus-master\Antivirus\Test_in_console\bin\Debug\Signature_Base.pdb
 C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Signature_Base.dll
-C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\ScanObjectBuilder.dll
 C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Signature_Base.pdb
-C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\ScanObjectBuilder.pdb
 C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\obj\Debug\Test_in_console.csprojAssemblyReference.cache
 C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\obj\Debug\Test_in_console.exe
 C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\obj\Debug\Test_in_console.pdb
