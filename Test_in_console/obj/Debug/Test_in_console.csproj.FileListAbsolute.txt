@@ -84,3 +84,16 @@ C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Signature_Base.d
 C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\ScanObjectBuilder.dll
 C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\Signature_Base.pdb
 C:\Users\Masha\source\repos\antivirus\Test_in_console\bin\Debug\ScanObjectBuilder.pdb
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\obj\Debug\Test_in_console.csprojAssemblyReference.cache
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\obj\Debug\Test_in_console.exe
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\obj\Debug\Test_in_console.pdb
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\Test_in_console.exe.config
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\Test_in_console.exe
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\Test_in_console.pdb
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\Scan.dll
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\Signature_Base.dll
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\TernarSearchTree.dll
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\Scan.pdb
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\Signature_Base.pdb
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\bin\Debug\TernarSearchTree.pdb
+C:\Users\Nikolay\Desktop\антивирус\antivirus\Test_in_console\obj\Debug\Test_in_console.csproj.CopyComplete

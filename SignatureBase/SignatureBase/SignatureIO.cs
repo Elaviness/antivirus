@@ -13,22 +13,26 @@ namespace SignatureBase
         public string signature_hash; // SHA256-хэш сигнатуры
         public int offset_begin; //минимальное смещение первого символа сигнатуры относительно начала
         public int offset_end; //максимальное смещение от начала файла
-        private Dictionary<string,Signature> signature_dict = new Dictionary<string, Signature>(); //словарь для хранения Ключа-Префикса и Значения-Экземпляра класса
+        private Dictionary<string, Signature> signature_dict; //словарь для хранения Ключа-Префикса и Значения-Экземпляра класса
         private Tree tree = new Tree();
-        readonly Work_with_data wwd = new Work_with_data();
-        public Signature() { } // конструктор
+        readonly Work_with_data wwd;
 
-        // конструктор класса по атрибутам
-        //private Signature(string name, int signature_length, string signature_prefix, string signature_hash, int offset_begin, int offset_end)
-        //{
-        //    this.name = name;
-        //    this.signature_length = signature_length;
-        //    this.signature_prefix = signature_prefix;
-        //    this.signature_hash = signature_hash;
-        //    this.offset_begin = offset_begin;
-        //    this.offset_end = offset_end;
+        public Signature() { }
+        public Signature(int i) // конструктор
+        {
 
-        //}
+            wwd  = new Work_with_data();
+            signature_dict = new Dictionary<string, Signature>();
+            wwd.Read_from_file();
+            if (wwd.virus_base[0] != "-1")
+            {
+                foreach (string line in wwd.virus_base)
+                {
+                    LineSplit(line);
+                }
+            }
+            return;
+        } 
 
         //метод класса для разбиения прочитанной строки и создания экземпляра класса
         // с последующим добавлением этого экземпляра с словарь и сохранением префикса в узле бинарного дерева
@@ -48,17 +52,9 @@ namespace SignatureBase
                 });
                 tree.Add(tmp[2]);
             }
-            catch (Exception) { }
+            catch (Exception ex) {}
         }
 
-        //загрузка всех записей из файла в список
-        public void Load_all_line_in_base()
-        {
-            for (int i = 0; i < System.IO.File.ReadAllLines(wwd.path_to_db_file).Length; i++)
-            {
-                LineSplit(wwd.Read_from_file_one_line(i));
-            }
-        }
 
         //Использует алгоритм двоичного поиска для нахождения определенного элемента в отсортированном списке
         private string Find_prefix(string region) 

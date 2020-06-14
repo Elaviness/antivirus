@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,9 @@ namespace SignatureBase
 {
 	public class Work_with_data
 	{
-		public Mutex mutex_wwd = new Mutex(false, "mutex_wwd");
-		public string signature_db_file_name = "SignatureDB.txt", path_to_db_file;
 
+		public string signature_db_file_name = "SignatureDB.txt", path_to_db_file;
+		public List<string> virus_base = new List<string>();
 		public Work_with_data()
 		{
 			path_to_db_file = Path.Combine(Directory.GetCurrentDirectory(), signature_db_file_name);
@@ -20,7 +21,6 @@ namespace SignatureBase
 		{
 			string text = virus_name + " " + signature_length.ToString() + " " + signature_prefix.ToString() + " " +
 				signature_hash + " " + offset_bigin.ToString() + " " + offset_end.ToString();
-			mutex_wwd.WaitOne();
 			try
 			{
 				using (StreamWriter writer = new StreamWriter(path_to_db_file, true, System.Text.Encoding.Default))
@@ -29,30 +29,29 @@ namespace SignatureBase
 				}
 			} catch (Exception)
 			{ }
-			finally
-			{
-				mutex_wwd.ReleaseMutex();
-			}
 			
 		}
 
 
-		public string Read_from_file_one_line(int number_line)
+		public List<string> Read_from_file()
 		{
+
+			string line;
 			try
 			{
-				mutex_wwd.WaitOne();
-				string line = File.ReadLines(path_to_db_file).ElementAt(number_line);
-				
-				return line;
+				using (StreamReader sr = new StreamReader(path_to_db_file, Encoding.Default))
+				{
+					while ((line = sr.ReadLine()) != null)
+					{
+						virus_base.Add(line);
+					}
+					return virus_base;
+				}
 			}
 			catch (Exception)
 			{
-				return "-1";
-			}
-			finally
-			{
-				mutex_wwd.ReleaseMutex();
+				virus_base.Add("-1");
+				return virus_base;
 			}
 		}
 
