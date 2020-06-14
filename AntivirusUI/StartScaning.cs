@@ -8,6 +8,7 @@ namespace AntivirusUI
     public partial class StartScaning : Form
     {
         public Signature sgnt {get; set;}
+        public bool flag = false;
         public StartScaning()
         {
             InitializeComponent();
@@ -37,7 +38,8 @@ namespace AntivirusUI
             await Task.Run(() =>
             {
                 scn_engine.Start_scaning(sgnt);
-                
+                if (flag)
+                    return;
             });
             scn_window.timer1.Enabled = false;
             scn_window.progressBar1.Value = 100;

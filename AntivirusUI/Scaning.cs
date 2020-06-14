@@ -23,6 +23,8 @@ namespace AntivirusUI
 
         private void Break_button_Click(object sender, EventArgs e)
         {
+            StartScaning ss = new StartScaning();
+            ss.flag = true;
             Close();
         }
 
